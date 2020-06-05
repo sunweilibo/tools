@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'rm -rf /data/tools'
-                sh 'cp -a ./src/ /data/'
+                sh 'rm -rf /data/tools/*'
+                sh 'cp -a ./src/* /data/tools'
             }
         }
     }
