@@ -4,22 +4,22 @@ pipeline {
         stage('build') {
             steps {
                 sh 'rm -rf /data/tools/*'
-                sh 'cp -a ./* /data/tools'
+                sh 'cp -a ./* /data/tools/'
             }
         }
     }
-    post {
-        cleanup {
-            /* clean up tmp directory */
-            dir("${workspace}@tmp") {
-                deleteDir()
-            }
-            dir("${workspace}@script") {
-                deleteDir()
-            }
-            /* clean up our workspace */
-            deleteDir()
-            /* clean up script directory */
-        }
-    }
+    // post {
+    //     cleanup {
+    //         /* clean up tmp directory */
+    //         dir("${workspace}@tmp") {
+    //             deleteDir()
+    //         }
+    //         dir("${workspace}@script") {
+    //             deleteDir()
+    //         }
+    //         /* clean up our workspace */
+    //         deleteDir()
+    //         /* clean up script directory */
+    //     }
+    // }
 }
