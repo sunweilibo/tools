@@ -3,6 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'rm -rf /data/tools'
                 sh "cp -a ${workspace} /data"
             }
         }
