@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'rm -rf /data/tools/*'
-                sh 'cp -a ./* /data/tools/'
+                sh 'cp -a ./src/ /data/tools/'
             }
         }
     }
