@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'node -v'
+                sh 'cp -ar ./* /data/tools'
             }
         }
     }
